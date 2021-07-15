@@ -39,7 +39,8 @@ main .new-tweet {
 article.tweet{
   background-color: #f4f1ec;
   border: 2px solid;
-  padding: 1em 1em 1em 1em;  
+  padding: 1em 1em 1em 1em;
+  margin-bottom : 2em;  
 }
 article.tweet header{
   margin-top: 0px;
@@ -76,13 +77,13 @@ article.tweet footer a .fa:hover{
   color:#db9d00;
 }
 
-.all-tweets:hover{
+.tweet:hover{
   /* font-weight: bold; */
   box-shadow: 5px 10px #929191;
 
 
 }
-.all-tweets:hover .tweeter-handle{
+.tweet:hover .tweeter-handle{
   /* display:block; */
   color: gray;
 
