@@ -19,11 +19,15 @@ body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-}
-main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
+}
+main {
+  /* display: flex; */
+  /* flex-direction: column;
+  align-items: center; */
   width: 90%;
   background-color: #f4f1ec;
 }
@@ -31,3 +35,45 @@ main {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ @media only screen and (max-width: 1024px) {
+  .navbar{
+    background-color: #db9d00;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+  }
+  .body_container{
+    width : 100%;
+
+  }
+  .container {
+    padding-left: 3em;
+
+  }
+  header {
+    margin-top: 120px;
+  }
+}
+/* Desktop styles */
+@media only screen and (min-width: 1024px) {
+
+  .body_container {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-around;
+    margin-top : 4em;
+
+  }
+  .new-tweet{
+    margin-top: 120px;
+  }
+  .header{
+    height : 15em;
+    width : 25vw;
+    margin-right : 6em;
+  }
+  .container {
+    /* width : 40em; */
+    width : 50vw; 
+    margin-right : 2em;   
+  }
+
+} 

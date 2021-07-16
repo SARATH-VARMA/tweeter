@@ -5,6 +5,8 @@ $(document).ready(function() {
     counter.html(count);
     if (count < 0) {
       counter.addClass('negative');
+    } else {
+      counter.removeClass('negative');
     }
   })
 });
