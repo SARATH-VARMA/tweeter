@@ -49,16 +49,25 @@ article.tweet header{
   margin-top: 0px;
   background-color: #f4f1ec;
   height : 100px;
+  display : flex;
+  justify-content: space-between ;
+  align-items: center;
 
+}
+
+article.tweet .tweets-details{
+  display : flex;
+  align-items: center;
+}
+
+article.tweet .tweeter-name{
+  margin-left: 0.5em;
 }
 
 
 
 article.tweet .tweeter-handle{
   color: rgb(194, 191, 191);
-  /* display: none; */
-  float: right;
-
 }
 
 article.tweet .tweet-content{

@@ -16,8 +16,10 @@ $(document).ready(function() {
     let output = ""
     output += `<article class="tweet">
                 <header>
+                  <div class="tweets-details">
                   <img class="tweets-img" src=${escape(postObj.user.avatars)}> 
                   <span class="tweeter-name">${escape(postObj.user.name)}</span>
+                  </div>
                   <a class="tweeter-handle">${escape(postObj.user.handle)}</a>
                 </header>
                 <p class="tweet-content">${(postObj.content.text)}</p>
