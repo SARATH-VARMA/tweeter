@@ -5,27 +5,33 @@ main .new-tweet {
   font-weight: bold;
   width: 100%;
 }
+
 .newTweetForm {
   display: flex;
   flex-direction: column;
   align-items: space-around;
   width: 100%;
 }
+
 .form_text{
   border: none;
   border-bottom: 2px solid;
   background-color: #f4f1ec;
 }
+
 .form_footer{
   font-family: 'Bungee', sans-serif;
 }
+
 .counter{
   float: right;
   padding-top: 1em;
 }
+
 .negative{
   color: red;
 }
+
 .form_button{
   background-color: #4056A1;
   color:  #FFFF; 
@@ -33,6 +39,7 @@ main .new-tweet {
   border : none;
   cursor: pointer;
 }
+
 .all-tweets{
   margin-top: 3em;
   margin-bottom: 3em;
@@ -45,6 +52,7 @@ article.tweet{
   margin-bottom : 2em;
   overflow: scroll;  
 }
+
 article.tweet header{
   margin-top: 0px;
   background-color: #f4f1ec;
@@ -64,8 +72,6 @@ article.tweet .tweeter-name{
   margin-left: 0.5em;
 }
 
-
-
 article.tweet .tweeter-handle{
   color: rgb(194, 191, 191);
 }
@@ -76,11 +82,12 @@ article.tweet .tweet-content{
   padding-bottom: 2em; 
 
 }
+
 article.tweet footer{
   font-size: 20px;
 }
+
 article.tweet footer a{
-  /* display: none; */
   color:blue;
   float: right; 
   padding-right: 2em;
@@ -91,19 +98,12 @@ article.tweet footer a .fa:hover{
 }
 
 .tweet:hover{
-  /* font-weight: bold; */
   box-shadow: 5px 10px #929191;
-
-
 }
+
 .tweet:hover .tweeter-handle{
-  /* display:block; */
   color: gray;
-
 }
-/* .all-tweets:hover .icon{
-  display:block;
-} */
 
 .tweet-error {
   display: none;

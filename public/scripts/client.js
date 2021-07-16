@@ -1,7 +1,6 @@
 /*
  * Client-side JS logic goes here
  * jQuery is already loaded
- * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 $(document).ready(function() {
 
@@ -12,6 +11,7 @@ $(document).ready(function() {
     return div.innerHTML;
   }
 
+// Function: takes in a tweet object and return it in HTML
   const createTweetElement = postObj => {
     let output = ""
     output += `<article class="tweet">
@@ -35,6 +35,8 @@ $(document).ready(function() {
 
     return output
   };
+
+  // Function: takes an array of tweet objects and append each to the #tweets-container in HTML
   const renderTweets = tweetsArray => {
     $("#tweets-container").empty();
     for (const key in tweetsArray) {
@@ -42,6 +44,8 @@ $(document).ready(function() {
       $('#tweets-container').prepend($tweet);
     }
   }
+
+  // Function to fetch tweets from /tweets
   const loadTweets = () => {
     $.ajax({
       url: '/tweets',
@@ -54,18 +58,20 @@ $(document).ready(function() {
   }
   loadTweets();
 
+  //submit tweets
   $("#form_submit").submit(function(event) {
      // prevent the default behaviour to leave the page
     event.preventDefault();
     $('.tweet-error').hide()
     const inputLength = $(this).children('textarea').val().length;
+    // Validates that tweet length is <= 140 characters before submitting it
     if(inputLength >140) {                                     
       $(this).each(function() {
         $('.tweet-error').text("Sorry, content exceeds the 140 character limit").slideDown("slow");
       });
-    } else if (inputLength === 0) {                            
+    } else if (inputLength === 0) {  //verify that the input is not empty                                                    
         $(this).each(function() {
-          $('.tweet-error').text("Tweet is empty").slideDown("slow");        });
+          $('.tweet-error').text("Tweet is empty").slideDown("slow");});
     } else {
       $('.tweet-error').hide();
       $.ajax({

@@ -15,8 +15,6 @@ nav .logo{
 }
 nav .bold{
   font-weight: bolder;
-
-
 }
 
 nav .new-tweet-link{
@@ -28,6 +26,4 @@ nav .fa{
   color:red;
   float: right; 
   padding-right: 2em;
-
-
 }
